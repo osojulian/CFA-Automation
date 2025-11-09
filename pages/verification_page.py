@@ -22,6 +22,7 @@ class VerificationPage:
             modal_btn = wait.until(EC.element_to_be_clickable(
                 (By.CSS_SELECTOR, "a.dialog-close-button.dialog-lightbox-close-button")
             ))
+            
             # Esperar un momento para que termine la animación de entrada
             time.sleep(0.5)
 

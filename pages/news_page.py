@@ -9,6 +9,7 @@ import time
 class NewsPage:
     def __init__(self,driver):
         self.driver = driver
+
         ## Enlace a asociados
         self.link_asociados = (By.LINK_TEXT, "Asociados")
         self.link_news = (By.LINK_TEXT, "Blog")
@@ -22,6 +23,7 @@ class NewsPage:
             modal_btn = wait.until(EC.element_to_be_clickable(
                 (By.CSS_SELECTOR, "a.dialog-close-button.dialog-lightbox-close-button")
             ))
+
             # Esperar un momento para que termine la animación de entrada
             time.sleep(0.5)
 
@@ -55,7 +57,7 @@ class NewsPage:
 
         print("Esperando a que el menú se estabilice...")
 
-            # 2️⃣ Cancelar cualquier scroll automático o focus script
+            # Cancelar cualquier scroll automático o focus script
         self.driver.execute_script("""
             window.scrollTo(0, 0);
             document.body.style.overflow = 'hidden';
@@ -63,7 +65,7 @@ class NewsPage:
             document.addEventListener('scroll', e => { window.scrollTo(0, 0); }, true);
         """)
 
-            # 3️⃣ Esperar que la página esté arriba
+            # Esperar que la página esté arriba
         time.sleep(1)
         current_scroll = self.driver.execute_script("return window.scrollY;")
         if current_scroll != 0:

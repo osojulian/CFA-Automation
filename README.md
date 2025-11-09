@@ -240,44 +240,18 @@ pip install -r requirements.txt
 
 ---
 
-### 🧩 Generar el .DLL con .NET y PythonNET
-
-#### Configuración en `Program.cs`
-
-```csharp
-using Python.Runtime;
-
-class Program
-{
-    static void Main(string[] args)
-    {
-        Runtime.PythonDLL = @"C:\Program Files\Python311\python311.dll";
-        Environment.SetEnvironmentVariable("PYTHONHOME", @"C:\Users\Julian\Downloads\CFA\venv");
-        Environment.SetEnvironmentVariable("PYTHONPATH", @"C:\Users\Julian\Downloads\CFA\venv\Lib\site-packages");
-
-        PythonEngine.Initialize();
-        using (Py.GIL())
-        {
-            dynamic sys = Py.Import("sys");
-            sys.path.append(@"C:\Users\Julian\Downloads\CFA");
-            dynamic runner = Py.Import("cfa_automation.runner");
-            runner.run_tests();
-        }
-        PythonEngine.Shutdown();
-    }
-}
 ```
 
 #### Compilar como DLL
 
 ```bash
-cd "C:\Users\Julian\Downloads\CFA\dotnet_runner\CFAExecutor"
+cd "CFA\dotnet_runner\CFAExecutor"
 dotnet build -c Release
 ```
 
 **Salida:**
 ```
-C:\Users\Julian\Downloads\CFA\dotnet_runner\CFAExecutor\bin\Release\net9.0\CFAExecutor.dll
+CFA\dotnet_runner\CFAExecutor\bin\Release\net9.0\CFAExecutor.dll
 ```
 
 ---

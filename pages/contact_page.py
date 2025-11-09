@@ -68,7 +68,7 @@ class ContactPage:
 
         print("Esperando a que el menú se estabilice...")
 
-            # 2️⃣ Cancelar cualquier scroll automático o focus script
+            # Cancelar cualquier scroll automático o focus script
         self.driver.execute_script("""
             window.scrollTo(0, 0);
             document.body.style.overflow = 'hidden';
@@ -76,7 +76,7 @@ class ContactPage:
             document.addEventListener('scroll', e => { window.scrollTo(0, 0); }, true);
         """)
 
-            # 3️⃣ Esperar que la página esté arriba
+            # Esperar que la página esté arriba
         time.sleep(1)
         current_scroll = self.driver.execute_script("return window.scrollY;")
         if current_scroll != 0:

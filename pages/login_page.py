@@ -41,12 +41,10 @@ class LoginPage:
         take_screenshot(self.driver, "teclado_virtual_cargado")
         print("Pantalla de autenticación cargada correctamente (teclado virtual visible).")
 
-        # Esperar unos segundos para ver el resultado visualmente
+    
         time.sleep(2)
 
-        #self.driver.find_element(*self.user_field).send_keys(password)
-        #self.driver.implicitly_wait(3)
-        #self.driver.find_element(*self.login_button).click()
+
 
 
         
