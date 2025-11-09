@@ -1,0 +1,137 @@
+# ========================================
+# Python
+# ========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+*.pyd
+*.so
+
+# Entornos virtuales
+.venv/
+venv/
+ENV/
+env/
+.env
+
+# Distribución / empaquetado
+build/
+dist/
+*.egg-info/
+*.egg
+MANIFEST
+
+# PyTest
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+
+# ========================================
+# .NET
+# ========================================
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.user
+*.cache
+*.vs
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa]rtifacts/
+
+# Visual Studio
+.vs/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln.docstates
+*.userprefs
+
+# Rider
+.idea/
+*.sln.iml
+
+# ========================================
+# IDEs y Editores
+# ========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ========================================
+# Selenium / Drivers
+# ========================================
+drivers/
+*.log
+geckodriver.log
+chromedriver.log
+
+# ========================================
+# Reportes y Evidencias
+# ========================================
+report.html
+evidencias/
+screenshots/
+*.png
+*.jpg
+*.jpeg
+# Descomentar si quieres subir evidencias:
+
+# ========================================
+# Archivos temporales
+# ========================================
+*.tmp
+*.temp
+*.bak
+*.swp
+*~.nib
+*.log
+
+# ========================================
+# Sistema operativo
+# ========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ========================================
+# Configuración local
+# ========================================
+.env
+.env.local
+.env.*.local
+config.local.py
+secrets.json
+
+# ========================================
+# Node (si usas alguna herramienta JS)
+# ========================================
+node_modules/
+package-lock.json
+yarn.lock
+
+# ========================================
+# Archivos específicos del proyecto
+# ========================================
+# Rutas absolutas de configuración
+# appsettings.Development.json
+
